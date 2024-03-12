@@ -21,6 +21,7 @@ IF "%2" NEQ "" GOTO Install_app ELSE GOTO Migrations
 :Install_app
     python manage.py startapp %2
     mkdir templates\%2
+    mkdir fixtures
     echo "No olvides registrar tu app '$2' en settings.py"
 
 :Migrations
